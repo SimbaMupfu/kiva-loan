@@ -11,6 +11,7 @@
 		C1C11A932B2D20EE00BB3FEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C11A922B2D20EE00BB3FEF /* ContentView.swift */; };
 		C1C11A952B2D20F100BB3FEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1C11A942B2D20F100BB3FEF /* Assets.xcassets */; };
 		C1C11A982B2D20F100BB3FEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1C11A972B2D20F100BB3FEF /* Preview Assets.xcassets */; };
+		C1C11AA02B2D385300BB3FEF /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C11A9F2B2D385300BB3FEF /* Loan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		C1C11A922B2D20EE00BB3FEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C1C11A942B2D20F100BB3FEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1C11A972B2D20F100BB3FEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C1C11A9F2B2D385300BB3FEF /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		C1C11A8F2B2D20EE00BB3FEF /* KivaLoan */ = {
 			isa = PBXGroup;
 			children = (
+				C1C11A9E2B2D382E00BB3FEF /* Model */,
 				C1C11A902B2D20EE00BB3FEF /* KivaLoanApp.swift */,
 				C1C11A922B2D20EE00BB3FEF /* ContentView.swift */,
 				C1C11A942B2D20F100BB3FEF /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				C1C11A972B2D20F100BB3FEF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C1C11A9E2B2D382E00BB3FEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C1C11A9F2B2D385300BB3FEF /* Loan.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1C11A932B2D20EE00BB3FEF /* ContentView.swift in Sources */,
+				C1C11AA02B2D385300BB3FEF /* Loan.swift in Sources */,
 				C1C11A912B2D20EE00BB3FEF /* KivaLoanApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
