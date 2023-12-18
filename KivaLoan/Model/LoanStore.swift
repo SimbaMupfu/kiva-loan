@@ -9,6 +9,7 @@ import Foundation
 
 class LoanStore: Decodable, ObservableObject {
     @Published var loans: [Loan] = []
+    private var cachedLoans: [Loan] = []
     private static var kivaLoanURL = "https://api.kivaws.org/v1/loans/newest.json"
     
     enum CodingKeys: CodingKey {
@@ -39,6 +40,7 @@ class LoanStore: Decodable, ObservableObject {
             if let data = data {
                 DispatchQueue.main.async {
                     self.loans = self.parseJsonData(data: data)
+                    self.cachedLoans = self.loans
                 }
             }
         })
@@ -57,5 +59,9 @@ class LoanStore: Decodable, ObservableObject {
         }
         
         return loans
+    }
+    
+    func filterLoans(maxAmount: Int) {
+        self.loans = self.cachedLoans.filter { $0.amount < maxAmount }
     }
 }
