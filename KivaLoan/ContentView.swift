@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var loanStore = LoanStore()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            List(loanStore.loans) { loan in
+                LoanCellView(loan: loan)
+                    .padding(.vertical, 5)
+            }
+            .navigationTitle("Kiva Loan")
         }
-        .padding()
+        .task {
+            self.loanStore.fetchLatestLoans()
+        }
     }
 }
 
